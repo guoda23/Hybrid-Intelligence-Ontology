@@ -1,25 +1,26 @@
-# Scenario 3 Task Decomposition
+# Scenario 1 Task Decomposition
 
 ## Title 
-Collective Decisions in Law and Economics.
+Detecting conflicting, non-cooperative Smart Watch Assistants.
 
 ## Description 
- An artificial agent (Actor) needs to intervene to resolve a dilemma (Scenario) in a
-group decision, e.g. a jury (Actor). Bayesian logic (ProcessingMethod) is used as a meta-analytical tool to formalize the main criteria (i.e. individual and group accuracy in communication) for assessing when an intervention is (ir)responsible (EthicalConsideration), and to explain (Capability) the conditions (EndGoal) under which the autonomous agent should take the responsibility to act.
+This scenario involves smart assistants for improving personal health. An artificial agent provides behavior recommendations to users asking questions regarding daily diet and exercise schedule. The aim is to detect and explain deceptive behaviors such as lies about one's own activity from data errors due to external conditions (e.g. available resources, varying environmental conditions).  Argumentation Theory is used to detect errors and conflicts through reasoning over the users' prior knowledge in the form of a knowledge graph.
 
 ## Visual Task Decomposition
-![S3.png](S3.png)
+![S1.png](S1.png)
 
 ## Terminology 
-(dynamic) historical data, communication accuracy, action, intervention, explanation, language, decided intervention. (static) Bayesian model, societal values.
+(dynamic) user questions, behaviors, errors, causes, historical user
+data. (static) societal health values, external background knowledge.
 
 ## Inference Steps:
-1. predict the communication accuracy using Bayesian modelling and past data;
-2. classify interventions as (ir)/responsible based on an input action;
-3. generate explanations for these based on known societal values;
-4. rank the interventions based on societal values,
-5. generate language-based interventions;
-6. present the intervention to the group.
+1. receive question from a user;
+2. classify a user behavior based on questions, historical data, and societal values;
+3. assess the user behaviors;
+4. classify a deceptive behavior as an error using Argumentation Theory;
+5. induce the causes for an error;
+6. rank the classified behaviors ;
+7. provide the recommended behavior based on the detected cause.
 
 ## Tasks 
-Prediction (1), Societal Decision-Making (2-4), Explaining (3), Communicating (5-6).
+Recognition (1-2), Monitoring (3), Explaining (5), Recommendation (4-7).
