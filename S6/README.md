@@ -1,10 +1,10 @@
-# Scenario 6 Co-learning Buildings
+# Scenario 6 Task Decomposition
 
 ## Title 
-Detecting conflicting, non-cooperative Smart Watch Assistants.
+Co-learning Buildings.
 
 ## Description 
-A campus (Context) involves AIbased buildings (Actor) negotiating on power level for the heating system (EndGoal). They optimize their own energy consumption, take into account the energy needs of others when moving between different buildings, and also interact with human grid operators accounting for the preferences of building owners. The agents learn (ProcessingMethod) occupancy-movement patterns and building energy consumption behavior in a collaborative co-learning setting (InteractionMethod), where the learned models are negotiated in order to deliberate on a power distribution plan
+A campus (Context) involves AI based buildings (Actor) negotiating on power level for the heating system (EndGoal). They optimize their own energy consumption, take into account the energy needs of others when moving between different buildings, and also interact with human grid operators accounting for the preferences of building owners. The agents learn (ProcessingMethod) occupancy-movement patterns and building energy consumption behavior in a collaborative co-learning setting (InteractionMethod), where the learned models are negotiated in order to deliberate on a power distribution plan
 
 ## Visual Task Decomposition
 ![S6.png](S6.png)
@@ -18,9 +18,9 @@ models, distribution plans
 2. perceive energy consumption and temperature data from sensors;
 3. train&induce energy consumption and occupancy-movement patterns based
 on the measurements;
-4. - 
-5. - 
-6. - 
+4. idem
+5. idem
+6. idem 
 7. deliberate the building consumption model to the other agents;
 8. negotiate on a distribution plan;
 9. distribute the power level to the campus

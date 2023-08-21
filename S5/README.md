@@ -20,9 +20,9 @@ diagnoses, justifications, decisions. (static) human memory, medical KG
 3. (machine) train and
 4. (machine) classify diagnoses;
 5. generate a justification for the diagnosis and
-6. -
+6. idem
 7. present it to the other agent that can
-8. -
+8. idem
 9. obtain the information;
 10. ultimately, generate a combined decision.
 
