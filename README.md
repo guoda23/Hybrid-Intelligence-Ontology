@@ -13,4 +13,4 @@ Material for the work on "Knowledge Engineering for Hybrid Intelligence" : ontol
 - [S5](S5.png) Knowledge Graphs supporting Machine Intelligence
 - [S6](S6.png) Knowledge-aware Museum Guide for Virtual Heritage Exhibitions
 
-(Future work : templates, extended ontology, etc.)
+(Future work : templates, extended ontology, etcetera)
