@@ -3,7 +3,7 @@ This repository contains material for the work on "Knowledge Engineering for Hyb
 
 ## Domain Layer 
 - This visualisation shows the various knowledge roles for Hybrid Intelligence scenarios and functions as a high-level ontology  [HIO-v2.draw.png](HIO-v2.drawio.png)
-- Also included is the OWL ontology in Turtle syntax [hi_ontology.ttl](HI_ontology.ttl)
+- Also included is the OWL ontology in Turtle syntax [hi_ontology.ttl](hi_ontology.ttl)
 
 ## Task and Inference Layer
 We list HI-specific tasks and subtasks in this visualisation [HITasks.png](HITasks.png)
