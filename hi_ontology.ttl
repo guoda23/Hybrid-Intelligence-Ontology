@@ -1,0 +1,324 @@
+@prefix : <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51> .
+
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/ont/has_agent
+<http://example.org/ont/has_agent> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain <http://example.org/ont/Scenario> ;
+                                   rdfs:range <http://example.org/ont/Agent> .
+
+
+###  http://example.org/ont/has_experiment
+<http://example.org/ont/has_experiment> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://example.org/ont/Project> ;
+                                        rdfs:range <http://example.org/ont/Experiment> .
+
+
+###  http://example.org/ont/has_interaction_type
+<http://example.org/ont/has_interaction_type> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                              rdfs:domain <http://example.org/ont/Scenario> ;
+                                              rdfs:range <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/has_researcher
+<http://example.org/ont/has_researcher> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <http://example.org/ont/has_scenario> ;
+                                        rdfs:domain <http://example.org/ont/Experiment> ,
+                                                    <http://example.org/ont/Project> ;
+                                        rdfs:range <http://example.org/ont/Agent> .
+
+
+###  http://example.org/ont/has_scenario
+<http://example.org/ont/has_scenario> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://example.org/ont/Experiment> ,
+                                                  <http://example.org/ont/Project> ;
+                                      rdfs:range <http://example.org/ont/Scenario> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/ont/has_context
+<http://example.org/ont/has_context> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://example.org/ont/Scenario> ;
+                                     rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/ont/Adult
+<http://example.org/ont/Adult> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://example.org/ont/Human> .
+
+
+###  http://example.org/ont/Agent
+<http://example.org/ont/Agent> rdf:type owl:Class .
+
+
+###  http://example.org/ont/Artificial_Agent
+<http://example.org/ont/Artificial_Agent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ont/Agent> ;
+                                          owl:disjointWith <http://example.org/ont/Human> .
+
+
+###  http://example.org/ont/Child
+<http://example.org/ont/Child> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://example.org/ont/Human> .
+
+
+###  http://example.org/ont/ClassificationMethod
+<http://example.org/ont/ClassificationMethod> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/Collaboration
+<http://example.org/ont/Collaboration> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/Contribution
+<http://example.org/ont/Contribution> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/DataType
+<http://example.org/ont/DataType> rdf:type owl:Class .
+
+
+###  http://example.org/ont/DeductionMethod
+<http://example.org/ont/DeductionMethod> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/Designer
+<http://example.org/ont/Designer> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://example.org/ont/Adult> .
+
+
+###  http://example.org/ont/EngineeringChallenge
+<http://example.org/ont/EngineeringChallenge> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://example.org/ont/ResearchChallenge> .
+
+
+###  http://example.org/ont/EngineeringMethod
+<http://example.org/ont/EngineeringMethod> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/Experiment
+<http://example.org/ont/Experiment> rdf:type owl:Class .
+
+
+###  http://example.org/ont/ExperimentDomain
+<http://example.org/ont/ExperimentDomain> rdf:type owl:Class .
+
+
+###  http://example.org/ont/ExperimentalTechnique
+<http://example.org/ont/ExperimentalTechnique> rdf:type owl:Class .
+
+
+###  http://example.org/ont/GeneratingMethod
+<http://example.org/ont/GeneratingMethod> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/HIProject
+<http://example.org/ont/HIProject> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://example.org/ont/Project> .
+
+
+###  http://example.org/ont/Human
+<http://example.org/ont/Human> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://example.org/ont/Agent> .
+
+
+###  http://example.org/ont/HybridModel
+<http://example.org/ont/HybridModel> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://example.org/ont/Model> .
+
+
+###  http://example.org/ont/InductionMethod
+<http://example.org/ont/InductionMethod> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/InferenceMethod
+<http://example.org/ont/InferenceMethod> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/IntelligentSystem
+<http://example.org/ont/IntelligentSystem> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://example.org/ont/Artificial_Agent> .
+
+
+###  http://example.org/ont/Interaction
+<http://example.org/ont/Interaction> rdf:type owl:Class .
+
+
+###  http://example.org/ont/InteractionType
+<http://example.org/ont/InteractionType> rdf:type owl:Class .
+
+
+###  http://example.org/ont/Medical_Professional
+<http://example.org/ont/Medical_Professional> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://example.org/ont/Adult> .
+
+
+###  http://example.org/ont/Model
+<http://example.org/ont/Model> rdf:type owl:Class .
+
+
+###  http://example.org/ont/Multimodal
+<http://example.org/ont/Multimodal> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/NoCollaboration
+<http://example.org/ont/NoCollaboration> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/PredictionMethod
+<http://example.org/ont/PredictionMethod> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+###  http://example.org/ont/ProcessingMethod
+<http://example.org/ont/ProcessingMethod> rdf:type owl:Class .
+
+
+###  http://example.org/ont/Project
+<http://example.org/ont/Project> rdf:type owl:Class .
+
+
+###  http://example.org/ont/ResearchChallenge
+<http://example.org/ont/ResearchChallenge> rdf:type owl:Class .
+
+
+###  http://example.org/ont/ResearchQuestion
+<http://example.org/ont/ResearchQuestion> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ont/ResearchChallenge> .
+
+
+###  http://example.org/ont/Robot
+<http://example.org/ont/Robot> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://example.org/ont/Artificial_Agent> .
+
+
+###  http://example.org/ont/Scenario
+<http://example.org/ont/Scenario> rdf:type owl:Class .
+
+
+###  http://example.org/ont/SemanticModel
+<http://example.org/ont/SemanticModel> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ont/Model> .
+
+
+###  http://example.org/ont/Single-agents
+<http://example.org/ont/Single-agents> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://example.org/ont/InteractionType> .
+
+
+###  http://example.org/ont/StatisticalModel
+<http://example.org/ont/StatisticalModel> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://example.org/ont/Model> .
+
+
+###  http://example.org/ont/Teacher
+<http://example.org/ont/Teacher> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://example.org/ont/Adult> .
+
+
+###  http://example.org/ont/TrainingMethod
+<http://example.org/ont/TrainingMethod> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://example.org/ont/ProcessingMethod> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/ont/BioNetInconsistencyResolver
+<http://example.org/ont/BioNetInconsistencyResolver> rdf:type owl:NamedIndividual ,
+                                                              <http://example.org/ont/IntelligentSystem> .
+
+
+###  http://example.org/ont/Loan
+<http://example.org/ont/Loan> rdf:type owl:NamedIndividual ,
+                                       <http://example.org/ont/Adult> .
+
+
+###  http://example.org/ont/LoansExp1
+<http://example.org/ont/LoansExp1> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/ont/Experiment> ;
+                                   <http://example.org/ont/has_agent> <http://example.org/ont/SmartWatchApp> ,
+                                                                      <http://example.org/ont/SmartWatchUser1> ;
+                                   <http://example.org/ont/has_scenario> <http://example.org/ont/runningAppOnSmartWatch> .
+
+
+###  http://example.org/ont/LoansExp2
+<http://example.org/ont/LoansExp2> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/ont/Experiment> .
+
+
+###  http://example.org/ont/LoansProject
+<http://example.org/ont/LoansProject> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/ont/Project> ;
+                                      <http://example.org/ont/has_experiment> <http://example.org/ont/LoansExp1> .
+
+
+###  http://example.org/ont/SmartWatchApp
+<http://example.org/ont/SmartWatchApp> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/ont/IntelligentSystem> .
+
+
+###  http://example.org/ont/SmartWatchUser1
+<http://example.org/ont/SmartWatchUser1> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/ont/Adult> ;
+                                         <http://example.org/ont/has_agent> <http://example.org/ont/SmartWatchUser1> .
+
+
+###  http://example.org/ont/biographicalInquiryByDHExpert
+<http://example.org/ont/biographicalInquiryByDHExpert> rdf:type owl:NamedIndividual ,
+                                                                <http://example.org/ont/Scenario> .
+
+
+###  http://example.org/ont/runningAppOnSmartWatch
+<http://example.org/ont/runningAppOnSmartWatch> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/ont/Scenario> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://example.org/ont/ClassificationMethod>
+                <http://example.org/ont/DeductionMethod>
+                <http://example.org/ont/EngineeringMethod>
+                <http://example.org/ont/GeneratingMethod>
+                <http://example.org/ont/InductionMethod>
+                <http://example.org/ont/InferenceMethod>
+                <http://example.org/ont/PredictionMethod>
+                <http://example.org/ont/TrainingMethod>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
